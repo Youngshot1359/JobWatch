@@ -1,0 +1,6 @@
+# Public job-board slugs. STARTER LIST - not verified from my sandbox (no network).
+# Bad slugs are skipped with a log line, so just prune/extend over time.
+# Slug = the part after the host: boards.greenhouse.io/<slug>, jobs.lever.co/<slug>, jobs.ashbyhq.com/<slug>
+greenhouse: [cloudflare, datadog, stripe, databricks, okta, twilio, gitlab, mongodb, elastic, fastly, samsara, coinbase, robinhood, brex, airbnb, pinterest, reddit, discord, dropbox, hubspot, zscaler, crowdstrike, sentinelone, tenable, rapid7, 1password, snyk, fivetran, confluent, anduril]
+lever: [palantir, plaid, spotify, whoop, kraken]
+ashby: [ramp, notion, openai, linear, deel, retool, snowflake, benchling, vanta, drata, cohere]

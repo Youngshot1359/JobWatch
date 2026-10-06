@@ -1,0 +1,90 @@
+# Skill taxonomy used for matching.  Edit freely - this file IS your profile.
+#   tier: have     = on your resume / you're confident (full credit)
+#         adjacent = you could credibly do it (half credit) - promote to "have" when true
+#         gap      = commonly requested, you don't have it (zero credit, counts against the job)
+#   w: importance 1-3.  Skills not listed here are ignored (neutral).
+# Defaults below are derived from your resume + the three tracks you described.
+skills:
+  # ---------- core / shared ----------
+  python:            {tier: have, w: 3, aliases: [python, python3]}
+  aws:               {tier: have, w: 3, aliases: [aws, amazon web services]}
+  lambda:            {tier: have, w: 2, aliases: [aws lambda, lambda functions, serverless]}
+  aws_sam:           {tier: have, w: 1, aliases: [aws sam, sam cli, serverless application model]}
+  terraform:         {tier: have, w: 3, aliases: [terraform, infrastructure as code, iac]}
+  docker:            {tier: have, w: 2, aliases: [docker, containers, containerization]}
+  github_actions:    {tier: have, w: 2, aliases: [github actions]}
+  cicd:              {tier: have, w: 2, aliases: [ci/cd, cicd, continuous integration, continuous delivery, continuous deployment, ci-cd]}
+  rest_api:          {tier: have, w: 2, aliases: [rest api, rest apis, restful, api integration, api integrations, web apis]}
+  automation:        {tier: have, w: 2, aliases: [automation, automate, automating, scripting]}
+  git:               {tier: adjacent, w: 1, aliases: [git, github, gitlab]}
+  linux:             {tier: adjacent, w: 1, aliases: [linux, unix, bash]}
+  # ---------- security / WAF track ----------
+  akamai:            {tier: have, w: 3, aliases: [akamai]}
+  waf:               {tier: have, w: 3, aliases: [waf, web application firewall, web application firewalls, app and api protector, appsec]}
+  cdn:               {tier: have, w: 2, aliases: [cdn, content delivery network, edge security]}
+  edge_dns:          {tier: have, w: 1, aliases: [edge dns, dns security, dns]}
+  bot_mgmt:          {tier: have, w: 2, aliases: [bot manager, bot management, bot mitigation, bot protection]}
+  siem:              {tier: have, w: 2, aliases: [siem, security information and event management, log analysis]}
+  iam:               {tier: have, w: 2, aliases: [iam, identity and access management, least privilege, rbac]}
+  nist:              {tier: have, w: 2, aliases: [nist, nist 800, nist 800-53, 800-53]}
+  pci:               {tier: have, w: 2, aliases: [pci, pci dss, pci-dss]}
+  compliance:        {tier: have, w: 1, aliases: [compliance, soc 2, soc2, iso 27001, grc]}
+  sec_automation:    {tier: have, w: 3, aliases: [security automation, devsecops, secure by default, security engineering, cloud security, platform security, detection engineering]}
+  config_drift:      {tier: have, w: 2, aliases: [configuration drift, drift detection, security posture, cspm, policy as code]}
+  cloudflare:        {tier: adjacent, w: 2, aliases: [cloudflare, fastly, imperva, f5]}
+  owasp:             {tier: adjacent, w: 2, aliases: [owasp, xss, sql injection, ddos, application security]}
+  splunk:            {tier: adjacent, w: 1, aliases: [splunk, datadog, elk, elasticsearch, sentinel]}
+  vuln_mgmt:         {tier: adjacent, w: 1, aliases: [vulnerability management, vulnerability scanning, sast, dast]}
+  threat_modeling:   {tier: adjacent, w: 1, aliases: [threat modeling, incident response]}
+  pentest:           {tier: gap, w: 1, aliases: [penetration testing, pentest, red team, offensive security]}
+  # ---------- data engineering / ETL track ----------
+  etl:               {tier: have, w: 3, aliases: [etl, elt, data pipeline, data pipelines, data ingestion, data integration, data processing]}
+  databricks:        {tier: have, w: 3, aliases: [databricks, delta lake]}
+  data_eng:          {tier: have, w: 2, aliases: [data engineering, data engineer, data platform, telemetry]}
+  sql:               {tier: adjacent, w: 3, aliases: [sql, postgresql, postgres, mysql, redshift, athena]}
+  spark:             {tier: adjacent, w: 2, aliases: [spark, pyspark, apache spark]}
+  airflow:           {tier: adjacent, w: 2, aliases: [airflow, dagster, prefect, step functions, glue]}
+  pandas:            {tier: adjacent, w: 1, aliases: [pandas, numpy, data wrangling]}
+  dbt_snowflake:     {tier: adjacent, w: 2, aliases: [dbt, snowflake, bigquery, data warehouse, data warehousing]}
+  kafka:             {tier: adjacent, w: 1, aliases: [kafka, kinesis, streaming]}
+  scala:             {tier: gap, w: 1, aliases: [scala]}
+  ml:                {tier: gap, w: 1, aliases: [machine learning, deep learning, mlops]}
+  # ---------- full stack track ----------
+  javascript:        {tier: have, w: 2, aliases: [javascript, js, ecmascript]}
+  html_css:          {tier: have, w: 1, aliases: [html, css, html5, css3]}
+  figma:             {tier: have, w: 1, aliases: [figma, wireframes, wireframing]}
+  react:             {tier: adjacent, w: 3, aliases: [react, react.js, reactjs, next.js, nextjs]}
+  node:              {tier: adjacent, w: 2, aliases: [node.js, nodejs, node, express]}
+  typescript:        {tier: adjacent, w: 2, aliases: [typescript]}
+  graphql:           {tier: adjacent, w: 1, aliases: [graphql]}
+  kubernetes:        {tier: adjacent, w: 1, aliases: [kubernetes, k8s, helm, eks]}
+  # ---------- commonly requested things you don't have ----------
+  java:              {tier: gap, w: 2, aliases: [java, spring boot, spring]}
+  golang:            {tier: gap, w: 2, aliases: [golang]}
+  csharp:            {tier: gap, w: 2, aliases: [c#, .net, dotnet, asp.net]}
+  cpp:               {tier: gap, w: 1, aliases: [c++]}
+  ruby:              {tier: gap, w: 1, aliases: [ruby, rails, ruby on rails]}
+  php:               {tier: gap, w: 1, aliases: [php, laravel]}
+  rust:              {tier: gap, w: 1, aliases: [rust]}
+  azure:             {tier: gap, w: 1, aliases: [azure]}
+  gcp:               {tier: gap, w: 1, aliases: [gcp, google cloud]}
+  angular_vue:       {tier: gap, w: 1, aliases: [angular, vue, vue.js, svelte]}
+
+# Used only to LABEL each job ("closest track") and to give a small title bonus.
+families:
+  security_engineering:
+    label: Security Eng / WAF
+    title_keywords: [security engineer, security automation, platform security, cloud security, appsec, application security, devsecops, waf, detection engineer, security software engineer]
+    skills: [akamai, waf, cdn, bot_mgmt, siem, iam, nist, pci, compliance, sec_automation, config_drift, cloudflare, owasp, edge_dns, vuln_mgmt, threat_modeling]
+  data_engineering:
+    label: Data Eng / ETL
+    title_keywords: [data engineer, etl, analytics engineer, data platform, data pipeline, big data]
+    skills: [etl, databricks, data_eng, sql, spark, airflow, pandas, dbt_snowflake, kafka]
+  full_stack:
+    label: Full Stack
+    title_keywords: [full stack, full-stack, fullstack, software engineer, web developer, application developer, frontend, backend]
+    skills: [javascript, html_css, react, node, typescript, graphql, figma, rest_api]
+  cloud_automation:
+    label: Cloud / Automation
+    title_keywords: [cloud engineer, devops, site reliability, sre, platform engineer, infrastructure engineer, automation engineer]
+    skills: [aws, lambda, aws_sam, terraform, docker, github_actions, cicd, automation, kubernetes, linux, git]

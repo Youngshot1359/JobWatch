@@ -1,0 +1,32 @@
+name: daily-jobwatch
+on:
+  schedule:
+    - cron: "0 12 * * *"      # 12:00 UTC = 8:00 AM US Eastern (7:00 AM in winter). GitHub cron can lag a few minutes.
+  workflow_dispatch: {}       # lets you press "Run workflow" to test
+permissions:
+  contents: write             # needed to commit state/seen.json
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt
+      - name: Fetch, score, email
+        run: python -m jobwatch
+        env:
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          JSEARCH_API_KEY: ${{ secrets.JSEARCH_API_KEY }}
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+      - name: Remember what we've already emailed
+        run: |
+          git config user.name "jobwatch-bot"
+          git config user.email "jobwatch-bot@users.noreply.github.com"
+          git add state/seen.json
+          git diff --cached --quiet || (git commit -m "update seen jobs" && git push)
+      - uses: actions/upload-artifact@v4
+        with: { name: scorecard, path: output/scorecard.csv }

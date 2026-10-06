@@ -1,0 +1,39 @@
+min_score: 90          # "Top matches" section of the email
+near_miss_score: 80    # "Worth a look" section (set equal to min_score to disable)
+max_per_section: 15
+fallback_top_n: 5      # if nothing clears min_score, still show this many closest jobs
+
+scoring:
+  min_distinct_skills: 3      # fewer detected skills => low-evidence, score x factor
+  low_evidence_factor: 0.7
+  min_have_matches: 3         # need this many full-credit skills or score is capped at 79
+  years_ok: 3                 # years of experience you're comfortable with
+  years_penalty: 6            # points lost per year above years_ok (max 40)
+  title_bonus: 5
+  penalty_staff: 25           # staff/principal/director/manager titles
+  penalty_senior: 8           # senior/lead titles
+  penalty_clearance: 30       # TS/SCI, polygraph, active clearance required
+
+# Titles containing these are dropped before scoring.
+negative_title_keywords: [sales, recruiter, account executive, account manager, marketing, customer success, business development, accountant, nurse, driver, legal counsel, designer, product manager, technical writer, solutions consultant, sdr, bdr]
+
+locations:
+  allow_remote: true
+  exclude_non_us: true
+  require_any: []   # e.g. [maryland, " md", washington, virginia]  (empty = any US location)
+
+sources:
+  greenhouse: true
+  lever: true
+  ashby: true
+  jsearch:                       # needs JSEARCH_API_KEY; free tier = 200 req/mo, so keep <= 5 queries/day
+    enabled: false
+    date_posted: 3days
+    queries:
+      - "cloud security automation engineer in united states"
+      - "data engineer ETL databricks in united states"
+      - "full stack engineer python in united states"
+  adzuna:                        # needs ADZUNA_APP_ID / ADZUNA_APP_KEY (free). Descriptions are truncated => weaker scoring.
+    enabled: false
+    max_days_old: 3
+    queries: ["security automation engineer", "data engineer etl", "full stack engineer python"]

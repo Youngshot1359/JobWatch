@@ -1,0 +1,82 @@
+[
+ {
+  "source": "greenhouse",
+  "id": "1",
+  "title": "Cloud Security Automation Engineer",
+  "company": "Acme Edge",
+  "location": "Remote - US",
+  "url": "https://example.com/1",
+  "description": "We run a WAF and CDN platform. You will build security automation in Python on AWS (Lambda, SAM) with Terraform and GitHub Actions CI/CD, detect configuration drift against NIST 800 and PCI baselines, integrate REST APIs, and feed SIEM alerts. Experience with Akamai or Cloudflare bot management is a plus. 2+ years experience. Least privilege IAM.",
+  "remote": true
+ },
+ {
+  "source": "greenhouse",
+  "id": "2",
+  "title": "Data Engineer",
+  "company": "DataCo",
+  "location": "Remote",
+  "url": "https://example.com/2",
+  "description": "Build ETL data pipelines in Python and SQL on Databricks and Spark. Orchestrate with Airflow on AWS, Terraform for infrastructure, CI/CD with GitHub Actions. Snowflake experience helpful. 3+ years experience.",
+  "remote": true
+ },
+ {
+  "source": "greenhouse",
+  "id": "3",
+  "title": "Staff Software Engineer, Backend",
+  "company": "BigJava",
+  "location": "Seattle, WA",
+  "url": "https://example.com/3",
+  "description": "10+ years of experience with Java, Spring Boot, Kubernetes, Go and Azure. Lead architecture across teams.",
+  "remote": false
+ },
+ {
+  "source": "greenhouse",
+  "id": "4",
+  "title": "Enterprise Account Executive",
+  "company": "SellCo",
+  "location": "New York, NY",
+  "url": "https://example.com/4",
+  "description": "Sell our WAF product to enterprises. Quota carrying.",
+  "remote": false
+ },
+ {
+  "source": "greenhouse",
+  "id": "5",
+  "title": "Full Stack Engineer",
+  "company": "WebApps",
+  "location": "Remote - US",
+  "url": "https://example.com/5",
+  "description": "Build features in React, TypeScript and Node.js with PostgreSQL on AWS. REST API design, Docker, CI/CD. 3+ years.",
+  "remote": true
+ },
+ {
+  "source": "greenhouse",
+  "id": "6",
+  "title": "Senior Security Engineer",
+  "company": "DefenseCo",
+  "location": "Arlington, VA",
+  "url": "https://example.com/6",
+  "description": "Active TS/SCI clearance with polygraph required. 8+ years of experience. Python, AWS, Terraform, SIEM, compliance, NIST 800-53.",
+  "remote": false
+ },
+ {
+  "source": "greenhouse",
+  "id": "7",
+  "title": "Backend Engineer",
+  "company": "LondonCo",
+  "location": "London, United Kingdom",
+  "url": "https://example.com/7",
+  "description": "Python, AWS, Terraform, Docker, CI/CD, REST APIs.",
+  "remote": false
+ },
+ {
+  "source": "greenhouse",
+  "id": "8",
+  "title": "Platform Security Engineer",
+  "company": "PayCo",
+  "location": "San Francisco, CA",
+  "url": "https://example.com/8",
+  "description": "Own WAF and edge security (Akamai, Cloudflare). Python automation, Terraform, AWS, IAM least privilege, PCI DSS compliance, SIEM, bot management, CDN. Build developer-facing security tooling. 3 years experience.",
+  "remote": false
+ }
+]
